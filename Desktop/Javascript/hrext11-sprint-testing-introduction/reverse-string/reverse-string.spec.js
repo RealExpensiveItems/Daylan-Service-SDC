@@ -9,9 +9,3 @@ describe('reverseString', function(){
 		expect(reverseString('cat').to.equal('tac'))
 	});
 });
-
-describe('reverseString', function(){
-	it('reverses a string', function(){
-		expect(reverseString('').to.equal(''))
-	})
-})
