@@ -1,0 +1,3 @@
+describe('firstNonRepeatChar', function() {
+
+});
