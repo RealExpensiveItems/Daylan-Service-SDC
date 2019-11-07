@@ -27,14 +27,17 @@ class App extends React.Component {
     let id = window.location.href.split("id=")[1];
     // console.log(id); //undefined
     // let url = window.location.href;
-    axios.get(`${axios_url}/restaurants/api/reviews/${id}`)
+
+    // axios.get(`${axios_url}/restaurants/api/reviews/${id}`)
+    axios.get(`restaurants/api/reviews/1`)
+
     // axios.get(url+'api/reviews')
       .then( data => {
         this.sortReviews('Most recent', data.data);
       })
       .catch(err => console.log('Error getting review data: ',err));
   }
-  
+
   getRestaurantDataByRestaurantID(data) {
     //get the restaurant id by looking at the restaurantID of the first review (assuming there is at least one review)
     if (data.length > 0) {
