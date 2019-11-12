@@ -1,3 +1,9 @@
 /node_modules
 .env
 /coverage
+/SDC.pem
+/postgres/test.csv
+/postgres/usercomments.csv
+/database/test.json
+/postgres/restcomments.csv
+
