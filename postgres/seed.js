@@ -48,7 +48,7 @@ var i = 0;
 
 function write() {
   var ok = true;
-  if (i % 10 === 0) {
+  if (i % 100000 === 0) {
     console.log(new Date())
   }
 
@@ -58,15 +58,15 @@ function write() {
     i++;
     var newData = scaledUserGenerator(1);
 
-    if (i === 15) {
+    if (i === 10000000) {
       console.log(new Date())
       info.write((newData), 'utf8', () => {info.end()})
     } else {
       ok = info.write((newData), 'utf8')
     }
   }
-  while (i <15 && ok);
-  if (i < 15) {
+  while (i <10000000 && ok);
+  if (i < 10000000) {
     info.once('drain', write)
   }
 }
@@ -80,7 +80,7 @@ var j = 0;
 
 function write1() {
   var ok = true;
-  if (j % 10 === 0) {
+  if (j % 100000 === 0) {
     console.log(new Date())
   }
 
@@ -89,15 +89,15 @@ function write1() {
     j++;
     var newData = scaledGenerator(1);
 
-    if (j === 15) {
+    if (j === 9900000) {
       console.log(new Date())
       comments.write((newData), 'utf8', () => {comments.end()})
     } else {
       ok = comments.write((newData), 'utf8')
     }
   }
-  while (j <15 && ok);
-  if (j < 15) {
+  while (j <9900000 && ok);
+  if (j < 9900000) {
     comments.once('drain', write1)
   }
 }
