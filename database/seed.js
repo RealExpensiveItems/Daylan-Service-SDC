@@ -1,11 +1,11 @@
 const generator = require ('./mockdata.js');
 const ReviewList = require ('./model.js');
 
-const scaledGenerator = require('./scaledata.js')
-var heapdump = require('heapdump');
-const fs = require('fs')
-//const test = __dirname + '/../database/test.json'
+let myData = generator(1000);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 // let myData = scaledGenerator(1000);
 
 // const seeder = () => {
@@ -15,6 +15,7 @@ const fs = require('fs')
 // }
 
 // seeder();
+>>>>>>> parent of 13220e4... Added postgres, now running ec2 instance
 
 
 let myData = scaledGenerator(1000000);
@@ -104,6 +105,12 @@ function write() {
   if (i < 10000000) {
     jsonStream.once('drain', write)
   }
+=======
+const seeder = () => {
+  ReviewList.insertMany(myData)
+    .then(() => console.log('Success adding data to database!'))
+    .catch(err => console.log(err))
+>>>>>>> parent of 2614fc4... Seeded and indexed with mongo, Working with CSV for seeding postgres
 }
 
-write();
+seeder();
