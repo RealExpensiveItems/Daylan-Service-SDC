@@ -30,7 +30,11 @@ app.get('/restaurants/api/review', (req, res) => {
   .then((result) => res.status(200).send(result.rows[0]))
   .catch((err) => console.log(err))
 })
-//
+
+app.get('/loaderio-155d8b4d228eaede9862626dfd6ba987/', (req, res) => {
+
+    res.status(200).send('loaderio-155d8b4d228eaede9862626dfd6ba987')
+})
 
 
 

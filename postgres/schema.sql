@@ -23,3 +23,4 @@ CREATE TABLE reviews (
 
 
 -- psql postgres -U daylanberry -f schema.sql
+-- psql -U postgres -d template1 -f schema.sql

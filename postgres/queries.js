@@ -1,14 +1,15 @@
 const {Pool, Client} = require('pg')
 
+//change user to daylanberry for local host
 const pool = new Pool({
-  user: 'daylanberry',
+  user: 'postgres',
   host: 'localhost',
   database: 'userreviews',
   max: 10,
 })
 
 const client = new Client({
-  user: 'daylanberry',
+  user: 'postgres',
   host: 'localhost',
   database: 'userreviews',
   max: 10,

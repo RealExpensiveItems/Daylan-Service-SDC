@@ -201,7 +201,9 @@ const generateUserScaleData = (num) => {
   var userObj = fakeData[0]['user']
 
   for (var prop in userObj) {
-    str += userObj[prop] + '*'
+    if (prop !== 'topReviewer') {
+      str += userObj[prop] + '*'
+    }
     if (prop === 'topReviewer') {
       str += userObj[prop]
     }
