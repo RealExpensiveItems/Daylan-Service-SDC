@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/hrla29-group-targaryen/reviews
+  - https://github.com/hrla29-group-targaryen/time-sponsored
+  - https://github.com/hrla29-group-targaryen/nav-about
+  - https://github.com/hrla29-group-targaryen/menu-cart
 
 ## Table of Contents
 
