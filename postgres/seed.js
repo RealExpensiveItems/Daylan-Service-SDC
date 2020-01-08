@@ -9,46 +9,14 @@ const fs = require('fs')
 
 let mdata = scaledGenerator(1);
 
-// var csvWriter = require('csv-write-stream')
-// var writer = csvWriter()
 var info = fs.createWriteStream('test.csv')
 var comments = fs.createWriteStream('restcomments.csv')
 
 var i = 0;
 
-// function write() {
-//   var ok = true;
-//   var start = new Date()
-//   console.log(start)
-//   do {
-//     i++;
-//     var newData = scaledGenerator(1);
-//     newData['id'] = i
-//     if (i === 10000000) {
-//       console.log(new Date())
-//       writer.pipe(info)
-//       writer.write(newData.user)
-//       writer.end()
-//     } else {
-//       ok = writer.write(newData.user)
-
-//     }
-//   }
-//   while (i < 10000000);
-//   if (i < 10000000) {
-//     writer.pipe(info)
-//     writer.write(newData.user)
-//     info.once('drain', write)
-//   }
-// }
-
-
-
-var i = 0;
-
 function write() {
   var ok = true;
-  if (i % 100000 === 0) {
+  if (i % 100 === 0) {
     console.log(new Date())
   }
 
@@ -72,10 +40,6 @@ function write() {
 }
 
 
-
-
-
-
 var j = 0;
 
 function write1() {
@@ -89,15 +53,15 @@ function write1() {
     j++;
     var newData = scaledGenerator(1);
 
-    if (j === 9900000) {
+    if (j === 9800000) {
       console.log(new Date())
       comments.write((newData), 'utf8', () => {comments.end()})
     } else {
       ok = comments.write((newData), 'utf8')
     }
   }
-  while (j <9900000 && ok);
-  if (j < 9900000) {
+  while (j <9800000 && ok);
+  if (j < 9800000) {
     comments.once('drain', write1)
   }
 }

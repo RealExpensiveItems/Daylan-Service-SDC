@@ -1,15 +1,16 @@
 const {Pool, Client} = require('pg')
 
 //change user to daylanberry for local host
+//change user to postgres for ec2
 const pool = new Pool({
-  user: 'postgres',
+  user: 'daylanberry',
   host: 'localhost',
   database: 'userreviews',
   max: 10,
 })
 
 const client = new Client({
-  user: 'postgres',
+  user: 'daylanberry',
   host: 'localhost',
   database: 'userreviews',
   max: 10,

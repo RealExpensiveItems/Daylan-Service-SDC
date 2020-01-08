@@ -209,11 +209,7 @@ const generateScaleData = (num) => {
 
   return str + '\n'
 
-
-  //use to seed user
-  // return fakeData[0]
 }
 
-// generateFakeData(10);
 
 module.exports = generateScaleData;

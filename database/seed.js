@@ -1,88 +1,9 @@
 const generator = require ('./mockdata.js');
 const ReviewList = require ('./model.js');
 
-let myData = generator(1000);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// let myData = scaledGenerator(1000);
-
-// const seeder = () => {
-//   ReviewList.insertMany(myData)
-//     .then(() => console.log('Success adding data to database!'))
-//     .catch(err => console.log(err))
-// }
-
-// seeder();
->>>>>>> parent of 13220e4... Added postgres, now running ec2 instance
-
-
 let myData = scaledGenerator(1000000);
 let mdata = scaledGenerator(1);
 
-
-// const seeder = () => {
-//   for (var i = 0; i < 5; i++) {
-//     ReviewList.insertMany(scaledGenerator(1))
-//       //.then(() =>ReviewList.insertMany(scaledGenerator(1)))
-//       .then(() => console.log(process))
-//       .catch(err => console.log(err))
-//   }
-// }
-
-// seeder()
-// var arr = [];
-
-
-// function writeTen(writer, data, encoding, cb) {
-//   var i = 1
-
-//   write()
-//   function write() {
-//     var ok = true;
-
-//     do {
-//       i++;
-//       var newData = scaledGenerator(1);
-//       if (i === 4) {
-//         arr.push(writer.write(data, encoding, cb))
-//       } else {
-//         ok = writer.write(data, encoding)
-//       }
-//     }
-//     while (i < 4 && ok);
-//     if (i < 4) {
-//       writer.once('drain', write)
-//     }
-//   }
-// }
-
-
-// writeTen(fs.createWriteStream('test.json', 'utf-8'), JSON.stringify(mdata), 'utf-8', () => {
-//   (fs.write(10, 'utf-8')).end()
-// })
-
-
-// for (var i = 0; i < 10; i++) {
-//   writeTen(fs.createWriteStream('test.json', 'utf-8'), JSON.stringify(scaledGenerator(1)), 'utf-8', () => {
-//     (fs.writeFile(8, mdata)).end()
-//   })
-
-// }
-
-//seeder()
-
-
-// let myData = generator(1000);
-
-// const seeder = () => {
-//   ReviewList.insertMany(myData)
-//     .then(() => console.log('Success adding data to database!'))
-//     .catch(err => console.log(err))
-// }
-
-// seeder();
 
 const jsonStream = fs.createWriteStream('test.json');
 
@@ -105,12 +26,11 @@ function write() {
   if (i < 10000000) {
     jsonStream.once('drain', write)
   }
-=======
+
 const seeder = () => {
   ReviewList.insertMany(myData)
     .then(() => console.log('Success adding data to database!'))
     .catch(err => console.log(err))
->>>>>>> parent of 2614fc4... Seeded and indexed with mongo, Working with CSV for seeding postgres
 }
 
 seeder();
