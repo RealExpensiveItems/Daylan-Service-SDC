@@ -17,10 +17,9 @@
 
 ## Usage
 
-> Some usage instructions
-git clone https://github.com/hrla29-group-targaryen/reviews
-cd reviews
-npm install 
+- git clone https://github.com/hrla29-group-targaryen/reviews
+- cd reviews
+- npm install 
 
 ## Requirements
 
